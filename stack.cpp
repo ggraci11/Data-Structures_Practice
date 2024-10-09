@@ -6,11 +6,10 @@ class Stack
 {
 public:
 
-    int capacity = 5;
-    int counter = 0;
-    Stack()
+    Stack(int cap = 5, int count = 0)
     {
-        
+        counter = count;
+        capacity = cap;
     }
 
     void push(int value)
@@ -81,7 +80,7 @@ public:
         int removed;
         if(counter <= 0)
         {
-            cout << "ERROR: No values left to remove...";
+            cout << "ERROR: No values left to remove..." << endl;
         }
         else
         {
@@ -97,7 +96,7 @@ public:
     {
         if(counter <= 0)
         {
-            cout << "Empty Array!";
+            cout << "Empty Array!" << endl;
         }
         else
         {
@@ -113,7 +112,7 @@ public:
     {
         if(counter <= 0)
         {
-            cout << "Empty Array!";
+            cout << "Empty Array!" << endl;
         }
         else
         {
@@ -125,7 +124,8 @@ public:
     }
 
 private:
-    int top;
+    int counter;
+    int capacity;
     int *array = new int [capacity]{};
 
 };
@@ -133,11 +133,21 @@ private:
 int main()
 {
     Stack Object;
+
+    Object.pop();
+    cout << endl;
+
+    Object.print();
+    cout << endl;
+
     Object.push(1);
     Object.push(2);
     Object.push(3);
     Object.push(4);
     Object.push(5);
+    Object.print();
+
+    cout << endl;
     Object.push(6);
     Object.print();
 

@@ -7,7 +7,7 @@ Practicing the following data structures in C++:
 
 • Linked Lists
 
-• Stacks
+• Stacks (Used Dynamic Array)
 
 • Queues
 
